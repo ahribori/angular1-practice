@@ -13,5 +13,8 @@
 	<p>{{ todo.completed }}</p>
 	<input type="checkbox" ng-model="todo.completed">
 	<p>{{ todo.createdAt }}</p>
+	<div ng-repeat="data in dataList">
+		<div>{{data.index}} : {{data.name}}</div>
+	</div>
 </body>
 </html>
