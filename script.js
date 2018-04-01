@@ -26,5 +26,9 @@
             }
         ];
 
+        $scope.handleClick = () => {
+            console.log('click!');
+        };
+
     }]);
 })();
