@@ -3,25 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Angular1 practice</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="script.js"></script>
 </head>
 <body ng-app="todoApp" ng-controller="TodoCtrl">
 	<h1>Todo</h1>
-	<h3>{{ todo.title }}</h3>
-	<input type="text" ng-model="todo.title">
-	<p>{{ todo.completed }}</p>
-	<input type="checkbox" ng-model="todo.completed">
-	<p>{{ todo.createdAt }}</p>
-	<div ng-repeat="data in dataList">
-		<div>{{data.index}} : {{data.name}}</div>
+	<div ng-repeat="todo in todos">
+		<date>{{todo.createdAt | date : 'yyyy/MM/dd hh:mm:ss' }}</date>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<div class="input-group-text">
+					<input type="checkbox" aria-label="Checkbox for following text input" ng-model="todo.completed">
+				</div>
+			</div>
+			<input type="text" class="form-control" aria-label="Text input with checkbox" ng-model="todo.title">
+			<div class="input-group-append">
+				<button class="btn btn-danger" type="button" ng-click="remove($index)">삭제</button>
+			</div>
+		</div>
 	</div>
-	<hr />
-	<h3>filter</h3>
-	<input type="text" ng-model="searchText">
-	숫자만 출력
-	<div>{{searchText | number}}</div>
-	<hr />
-	<button type="button" ng-click="handleClick()">클릭!!</button>
 </body>
 </html>

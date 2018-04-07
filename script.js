@@ -1,33 +1,32 @@
-(function() {
+(function () {
 
     // 컨테이너
     const app = angular.module('todoApp', []);
 
-    app.controller('TodoCtrl', ['$scope', function($scope) {
+    app.controller('TodoCtrl', ['$scope', function ($scope) {
         console.log($scope);
-        $scope.todo = {
-            title: '텍스트 필드',
-            completed: false,
-            createdAt: Date.now(),
-        };
-
-        $scope.dataList = [
+        $scope.todos = [
             {
-                index: 0,
-                name: 'ahri',
+                title: '앵귤러 공부',
+                completed: false,
+                createdAt: Date.now(),
             },
             {
-                index: 1,
-                name: 'bori',
+                title: '치과 가기',
+                completed: false,
+                createdAt: Date.now(),
             },
             {
-                index: 2,
-                name: 'hi',
+                title: '파이썬 스터디',
+                completed: false,
+                createdAt: Date.now(),
             }
         ];
 
-        $scope.handleClick = () => {
-            console.log('click!');
+        $scope.remove = (idx) => {
+            if (idx > -1) {
+                $scope.todos.splice(idx, 1);
+            }
         };
 
     }]);
