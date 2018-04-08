@@ -12,13 +12,22 @@
 	<h1>Todo</h1>
 
 	<form name="todoForm">
-		<div class="input-group mb-3">
-			<input type="text" class="form-control" ng-model="newTodoTitle" placeholder="새로운 TODO를 입력하세요" autofocus>
+		<div class="input-group">
+			<input type="text" class="form-control" ng-model="newTodoTitle" placeholder="새로운 TODO를 입력하세요" autofocus minlength="3">
 			<span class="input-group-append">
 				<button class="btn btn-success" type="submit" ng-click="add(newTodoTitle)">추가</button>
 			</span>
 		</div>
+		<div class="alert alert-warning" role="alert" ng-show="todoForm.$dirty && todoForm.$invalid">
+			3글자 이상 입력하세요
+		</div>
 	</form>
+
+	<pre>
+		<code>
+			{{ todoForm | json }}
+		</code>
+	</pre>
 
 	<div ng-repeat="todo in todos">
 		<date>{{todo.createdAt | date : 'yyyy/MM/dd hh:mm:ss' }}</date>
