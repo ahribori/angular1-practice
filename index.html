@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Angular1 practice</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="script.js"></script>
 </head>
@@ -13,7 +14,7 @@
 
 	<form name="todoForm">
 		<div class="input-group">
-			<input type="text" class="form-control" ng-model="newTodoTitle" placeholder="새로운 TODO를 입력하세요" autofocus minlength="3">
+			<input type="text" class="form-control" ng-model="newTodoTitle" placeholder="새로운 TODO를 입력하세요" autofocus minlength="3" kr-input>
 			<span class="input-group-append">
 				<button class="btn btn-success" type="submit" ng-click="add(newTodoTitle)">추가</button>
 			</span>
