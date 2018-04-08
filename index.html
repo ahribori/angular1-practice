@@ -8,7 +8,18 @@
 	<script src="script.js"></script>
 </head>
 <body ng-app="todoApp" ng-controller="TodoCtrl">
+
 	<h1>Todo</h1>
+
+	<form name="todoForm">
+		<div class="input-group mb-3">
+			<input type="text" class="form-control" ng-model="newTodoTitle" placeholder="새로운 TODO를 입력하세요" autofocus>
+			<span class="input-group-append">
+				<button class="btn btn-success" type="submit" ng-click="add(newTodoTitle)">추가</button>
+			</span>
+		</div>
+	</form>
+
 	<div ng-repeat="todo in todos">
 		<date>{{todo.createdAt | date : 'yyyy/MM/dd hh:mm:ss' }}</date>
 		<div class="input-group mb-3">

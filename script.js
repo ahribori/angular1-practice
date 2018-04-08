@@ -4,7 +4,6 @@
     const app = angular.module('todoApp', []);
 
     app.controller('TodoCtrl', ['$scope', function ($scope) {
-        console.log($scope);
         $scope.todos = [
             {
                 title: '앵귤러 공부',
@@ -28,6 +27,18 @@
                 $scope.todos.splice(idx, 1);
             }
         };
+
+        $scope.add = (newTodoTitle) => {
+            const newTodo = {
+                title: newTodoTitle,
+                completed: false,
+                createdAt: Date.now(),
+            };
+
+            $scope.todos.push(newTodo);
+
+            $scope.newTodoTitle = '';
+        }
 
     }]);
 })();
