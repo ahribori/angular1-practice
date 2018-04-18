@@ -8,7 +8,9 @@
 		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
 	<script src="./src/app.js"></script>
+	<script src="./src/routes.js"></script>
 	<script src="./src/controllers.js"></script>
 	<script src="./src/directives.js"></script>
 	<script src="./src/services.js"></script>
@@ -16,6 +18,7 @@
 
 <body ng-app="todoApp" ng-controller="TodoCtrl">
 <div class="container">
+
 	<todo-title></todo-title>
 
 	<todo-form></todo-form>
@@ -25,6 +28,9 @@
 	</div>
 
 	<todo-filters></todo-filters>
+
+	<navigator></navigator>
+	<ui-view></ui-view>
 </div>
 </body>
 </html>

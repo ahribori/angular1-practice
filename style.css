@@ -5,3 +5,11 @@ input.ng-valid.ng-dirty {
 input.ng-invalid.ng-dirty {
 	border: 2px solid red;
 }
+
+.ui-router-styles {
+	margin-top: 20px;
+}
+
+.ui-router-styles a {
+	margin-right: 20px;
+}

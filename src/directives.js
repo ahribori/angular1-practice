@@ -24,4 +24,10 @@
             templateUrl: 'src/templates/todoForm.tpl.html',
         }
     });
+
+    app.directive('navigator', function() {
+       return {
+           templateUrl: 'src/templates/navigator.tpl.html',
+       }
+    });
 })();
