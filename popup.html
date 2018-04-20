@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Angular1 practice</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+	<script src="./src/app.js"></script>
+	<script src="./src/routes.js"></script>
+	<script src="./src/controllers.js"></script>
+	<script src="./src/directives.js"></script>
+	<script src="./src/services.js"></script>
+</head>
+
+<body ng-app="todoApp" ng-controller="PopupCtrl">
+<button ng-click="callParentWindowFunction()">부모창 함수 호출</button>
+</body>
+</html>
